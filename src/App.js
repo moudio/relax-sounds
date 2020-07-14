@@ -3,13 +3,15 @@ import Navigation from './Navigation/Navigation';
 import { Router } from '@reach/router';
 import './App.css';
 import Welcome from './Welcome/Welcome';
+import About from './About/About';
 
 function App() {
   return (
     <div className="App">
       <Navigation />
       <Router>
-        <Welcome path="/" />
+        <Welcome exact path="/" />
+        <About path="/about" />
       </Router>
     </div>
   );
