@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <Navigation />
       <Router>
-        <Welcome exact path="/" />
+        <Welcome path="/" />
         <About path="/about" />
       </Router>
     </div>
