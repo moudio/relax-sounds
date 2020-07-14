@@ -1,9 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
+import Navigation from './Navigation/Navigation';
+import { Router } from '@reach/router';
 import './App.css';
+import Welcome from './Welcome/Welcome';
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <Navigation />
+      <Router>
+        <Welcome path="/" />
+      </Router>
+    </div>
+  );
 }
 
 export default App;
