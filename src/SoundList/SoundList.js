@@ -8,7 +8,6 @@ import './SoundList.css';
 function SoundList() {
   return (
     <div className="SoundList">
-      <h2>Browse Our Selection</h2>
       <div className="rain audio-div">
         <AudioPlayer sound={Rain} description="Rain" />
       </div>

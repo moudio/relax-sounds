@@ -42,7 +42,7 @@ function AudioPlayer({ sound, description }) {
   return (
     <div className="AudioPlayer">
       <div className="description">
-        <p>{description}</p>
+        <span>{description}</span>
       </div>
       <div className="play-pause">
         <div
