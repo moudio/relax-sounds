@@ -1,16 +1,24 @@
 import React, { useState } from 'react';
 import './AudioPlayer.css';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import PlayIcon from '../Pictures/play.png';
+import PauseIcon from '../Pictures/pause.png';
 import { BsPlayFill, BsFillVolumeUpFill, BsPauseFill } from 'react-icons/bs';
 
 function AudioPlayer({ sound }) {
   const track = new Audio(sound);
+  track.loop = true;
 
   function playSound() {
     if (!track.paused) {
       track.pause();
+      document.querySelector('.play-pause-icon').classList.add('play');
+      document.querySelector('.play-pause-icon').classList.remove('pause');
     } else {
       track.play();
+
+      document.querySelector('.play-pause-icon').classList.add('pause');
+      document.querySelector('.play-pause-icon').classList.remove('play');
     }
   }
 
@@ -22,11 +30,7 @@ function AudioPlayer({ sound }) {
   return (
     <div className="AudioPlayer">
       <div className="play-pause">
-        {track.paused ? (
-          <BsPlayFill className="play-icon" onClick={() => playSound()} />
-        ) : (
-          <BsPauseFill className="pause-icon" onClick={() => playSound()} />
-        )}
+        <div className="play-pause-icon play" onClick={() => playSound()}></div>
       </div>
       <div className="volume">
         <BsFillVolumeUpFill className="volume-icon" />
@@ -37,7 +41,7 @@ function AudioPlayer({ sound }) {
           id=""
           min="0"
           max="1"
-          step="0.1"
+          step="0.05"
           onChange={(e) => handleVolume(e)}
         />
       </div>

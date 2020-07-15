@@ -21,3 +21,19 @@
 .volume-range {
   cursor: pointer;
 }
+
+.play-pause-icon {
+  height: 30px;
+  width: 30px;
+  background-position: center;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.play {
+  background-image: url(../Pictures/play.png);
+}
+
+.pause {
+  background-image: url(../Pictures/pause.png);
+}
