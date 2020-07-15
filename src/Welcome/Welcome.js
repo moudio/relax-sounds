@@ -5,7 +5,9 @@ function Welcome() {
   return (
     <div className="welcome">
       <div className="hero">
-        <h1>Listen And Relax</h1>
+        <div className="hero-content">
+          <h1 className="hero-title">Listen And Relax</h1>
+        </div>
       </div>
       <Sounds />
     </div>

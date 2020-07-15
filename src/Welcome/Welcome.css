@@ -1,10 +1,16 @@
 .hero {
   height: 400px;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)),
     url('../Pictures/background.webp');
   background-position: center;
   background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.hero-title {
+  background-color: rgba(0, 0, 0, 0.7);
+  font-size: 60px;
+  color: white;
 }
