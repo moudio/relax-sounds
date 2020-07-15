@@ -1,6 +1,6 @@
 import React from 'react';
 import Navigation from './Navigation/Navigation';
-import { Router } from '@reach/router';
+import { Router, globalHistory } from '@reach/router';
 import './App.css';
 import Welcome from './Welcome/Welcome';
 import About from './About/About';
@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <Navigation />
       <Router>
-        <Welcome exact={true} path="/" />
+        <Welcome exact={true} path="/" history={globalHistory} />
         <About path="/about" />
         <Error path="*" />
       </Router>

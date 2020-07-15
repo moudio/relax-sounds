@@ -1,6 +1,7 @@
 .SoundList {
   overflow-y: scroll;
-  max-width: 500px;
+  max-width: 800px;
+  padding: 0 20px;
   margin: 0 auto;
   max-height: 300px;
 }

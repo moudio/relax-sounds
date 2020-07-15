@@ -1,18 +1,16 @@
 import React, { useState } from 'react';
 import './AudioPlayer.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import PlayIcon from '../Pictures/play.png';
 import PauseIcon from '../Pictures/pause.png';
+import { globalHistory } from '@reach/router';
 import { BsPlayFill, BsFillVolumeUpFill, BsPauseFill } from 'react-icons/bs';
 
 function AudioPlayer({ sound, description }) {
-  const track = new Audio(sound);
+  let track = new Audio(sound);
   track.loop = true;
 
   function playSound(e) {
-    console.log(e);
     let element = e.target;
-    console.log(element);
     if (!track.paused) {
       track.pause();
       element.classList.add('play');
@@ -27,6 +25,14 @@ function AudioPlayer({ sound, description }) {
       equalizerDiv.classList.add('show-equalizer');
     }
   }
+  globalHistory.listen(({ action }) => {
+    if (action === 'PUSH') {
+      if (track) {
+        track.pause();
+        track = null;
+      }
+    }
+  });
 
   function handleVolume(e) {
     const value = e.target.value;

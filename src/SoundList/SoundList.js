@@ -5,10 +5,10 @@ import SpringBirds from '../Tracks/spring_birds.mp3';
 import AudioPlayer from '../AudioPlayer/AudioPlayer';
 import WoodCracking from '../Tracks/wood_cracking.mp3';
 import './SoundList.css';
-function SoundList({ sounds }) {
+function SoundList() {
   return (
     <div className="SoundList">
-      <h2>SoundLists</h2>
+      <h2>Browse Our Selection</h2>
       <div className="rain audio-div">
         <AudioPlayer sound={Rain} description="Rain" />
       </div>
