@@ -5,20 +5,26 @@ import PlayIcon from '../Pictures/play.png';
 import PauseIcon from '../Pictures/pause.png';
 import { BsPlayFill, BsFillVolumeUpFill, BsPauseFill } from 'react-icons/bs';
 
-function AudioPlayer({ sound }) {
+function AudioPlayer({ sound, description }) {
   const track = new Audio(sound);
   track.loop = true;
 
-  function playSound() {
+  function playSound(e) {
+    console.log(e);
+    let element = e.target;
+    console.log(element);
     if (!track.paused) {
       track.pause();
-      document.querySelector('.play-pause-icon').classList.add('play');
-      document.querySelector('.play-pause-icon').classList.remove('pause');
+      element.classList.add('play');
+      element.classList.remove('pause');
+      const equalizerDiv = element.parentElement.nextSibling;
+      equalizerDiv.classList.remove('show-equalizer');
     } else {
       track.play();
-
-      document.querySelector('.play-pause-icon').classList.add('pause');
-      document.querySelector('.play-pause-icon').classList.remove('play');
+      element.classList.add('pause');
+      element.classList.remove('play');
+      const equalizerDiv = element.parentElement.nextSibling;
+      equalizerDiv.classList.add('show-equalizer');
     }
   }
 
@@ -29,9 +35,16 @@ function AudioPlayer({ sound }) {
 
   return (
     <div className="AudioPlayer">
-      <div className="play-pause">
-        <div className="play-pause-icon play" onClick={() => playSound()}></div>
+      <div className="description">
+        <p>{description}</p>
       </div>
+      <div className="play-pause">
+        <div
+          className="play-pause-icon play"
+          onClick={(e) => playSound(e)}
+        ></div>
+      </div>
+      <div className="equalizer"></div>
       <div className="volume">
         <BsFillVolumeUpFill className="volume-icon" />
         <input
