@@ -39,6 +39,17 @@ function AudioPlayer({ sound, description }) {
     track.volume = value;
   }
 
+  function handleMute(e) {
+    let volumeInput = e.target;
+    if (volumeInput.nodeName !== 'svg') {
+      volumeInput = volumeInput.parentElement;
+    }
+    let volumeRange = volumeInput.nextSibling;
+    volumeRange.value > 0
+      ? volumeRange.setAttribute('value', 0)
+      : volumeRange.setAttribute('value', 0.5);
+  }
+
   return (
     <div className="AudioPlayer">
       <div className="description">
@@ -52,7 +63,10 @@ function AudioPlayer({ sound, description }) {
       </div>
       <div className="equalizer"></div>
       <div className="volume">
-        <BsFillVolumeUpFill className="volume-icon" />
+        <BsFillVolumeUpFill
+          className="volume-icon"
+          onClick={(e) => handleMute(e)}
+        />
         <input
           className="volume-range"
           type="range"

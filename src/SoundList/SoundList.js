@@ -9,7 +9,7 @@ function SoundList() {
   return (
     <div className="SoundList">
       <div className="rain audio-div">
-        <AudioPlayer sound={Rain} description="Rain" />
+        <AudioPlayer sound={Rain} description="Rain"></AudioPlayer>
       </div>
       <AudioPlayer sound={WoodCracking} description="Camp Fire"></AudioPlayer>
       <AudioPlayer sound={Fan} description="Fan noise"></AudioPlayer>
