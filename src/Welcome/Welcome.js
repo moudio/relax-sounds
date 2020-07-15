@@ -7,7 +7,7 @@ function Welcome() {
       <div className="hero">
         <div className="hero-content">
           <h1 className="hero-title">
-            Listen And <span className="relax">Relax</span>
+            Listen and <span className="relax">Relax</span>
           </h1>
         </div>
       </div>
