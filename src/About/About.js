@@ -1,8 +1,9 @@
 import React from 'react';
+import './About.css';
 
 function About() {
   return (
-    <div>
+    <div className="About">
       <h1>Why Nature Sounds Help You Relax</h1>
       <p>
         Nature Sounds have been linked to relaxation and less stress for hundred
