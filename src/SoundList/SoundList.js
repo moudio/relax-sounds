@@ -9,7 +9,7 @@ function SoundList({ sounds }) {
     <div>
       <h2>SoundLists</h2>
       <div className="rain audio-div">
-        <AudioPlayer />
+        <AudioPlayer sound={Rain} />
       </div>
       <audio src={Fan} controls></audio> <br />
       <audio src={SpringBirds} controls></audio>

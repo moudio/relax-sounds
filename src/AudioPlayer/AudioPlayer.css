@@ -11,6 +11,13 @@
   font-size: 25px;
 }
 
-.AudioPlayer .play-icon {
+.play-pause,
+.volume {
+  display: flex;
+}
+
+.AudioPlayer .play-icon,
+.volume-icon,
+.volume-range {
   cursor: pointer;
 }
