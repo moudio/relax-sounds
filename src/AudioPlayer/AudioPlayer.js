@@ -40,14 +40,27 @@ function AudioPlayer({ sound, description }) {
   }
 
   function handleMute(e) {
+    console.log('handlemute');
     let volumeInput = e.target;
-    if (volumeInput.nodeName !== 'svg') {
+    console.log(volumeInput.nodeName);
+    if (volumeInput.nodeName === 'path') {
       volumeInput = volumeInput.parentElement;
+      console.log(volumeInput, ' now');
     }
     let volumeRange = volumeInput.nextSibling;
-    volumeRange.value > 0
-      ? volumeRange.setAttribute('value', 0)
-      : volumeRange.setAttribute('value', 0.5);
+    console.log('volume Range ', volumeRange);
+    console.log(typeof volumeRange.value);
+    if (parseFloat(volumeRange.value) > 0) {
+      console.log(typeof parseFloat(volumeRange.value));
+      console.log(parseFloat(volumeRange.value));
+      console.log('yes');
+      volumeRange.setAttribute('value', 0);
+    } else {
+      volumeRange.setAttribute('value', 0.5);
+      console.log('no');
+      console.log(typeof parseInt(volumeRange.value));
+      console.log(parseInt(volumeRange.value));
+    }
   }
 
   return (

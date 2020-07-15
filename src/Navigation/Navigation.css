@@ -7,3 +7,9 @@
 .Navbar ul {
   list-style: none;
 }
+
+.Navbar a {
+  text-decoration: underline;
+  color: black;
+  font-weight: bold;
+}
