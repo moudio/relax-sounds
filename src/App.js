@@ -1,13 +1,13 @@
-import React from 'react';
-import Navigation from './Navigation/Navigation';
-import { Router, globalHistory } from '@reach/router';
-import './App.css';
-import Welcome from './Welcome/Welcome';
-import About from './About/About';
-import Error from './Error/Error';
-import Footer from './Footer/Footer';
+import React from 'react'
+import Navigation from './Navigation/Navigation'
+import { Router, globalHistory } from '@reach/router'
+import './App.css'
+import Welcome from './Welcome/Welcome'
+import About from './About/About'
+import Error from './Error/Error'
+import Footer from './Footer/Footer'
 
-function App() {
+function App () {
   return (
     <div className="App">
       <Navigation />
@@ -18,7 +18,7 @@ function App() {
       </Router>
       <Footer />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

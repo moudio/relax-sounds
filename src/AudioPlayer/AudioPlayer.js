@@ -1,42 +1,41 @@
-import React, { useState } from 'react';
-import './AudioPlayer.css';
-import PlayIcon from '../Pictures/play.png';
-import PauseIcon from '../Pictures/pause.png';
-import { globalHistory } from '@reach/router';
-import { BsPlayFill, BsFillVolumeUpFill, BsPauseFill } from 'react-icons/bs';
+import React from 'react'
+import './AudioPlayer.css'
+import { globalHistory } from '@reach/router'
+import PropTypes from 'prop-types'
+import { BsFillVolumeUpFill } from 'react-icons/bs'
 
-function AudioPlayer({ sound, description }) {
-  let track = new Audio(sound);
-  track.loop = true;
+function AudioPlayer ({ sound, description }) {
+  let track = new Audio(sound)
+  track.loop = true
 
-  function playSound(e) {
-    let element = e.target;
+  function playSound (e) {
+    const element = e.target
     if (!track.paused) {
-      track.pause();
-      element.classList.add('play');
-      element.classList.remove('pause');
-      const equalizerDiv = element.parentElement.nextSibling;
-      equalizerDiv.classList.remove('show-equalizer');
+      track.pause()
+      element.classList.add('play')
+      element.classList.remove('pause')
+      const equalizerDiv = element.parentElement.nextSibling
+      equalizerDiv.classList.remove('show-equalizer')
     } else {
-      track.play();
-      element.classList.add('pause');
-      element.classList.remove('play');
-      const equalizerDiv = element.parentElement.nextSibling;
-      equalizerDiv.classList.add('show-equalizer');
+      track.play()
+      element.classList.add('pause')
+      element.classList.remove('play')
+      const equalizerDiv = element.parentElement.nextSibling
+      equalizerDiv.classList.add('show-equalizer')
     }
   }
   globalHistory.listen(({ action }) => {
     if (action === 'PUSH') {
       if (track) {
-        track.pause();
-        track = null;
+        track.pause()
+        track = null
       }
     }
-  });
+  })
 
-  function handleVolume(e) {
-    const value = e.target.value;
-    track.volume = value;
+  function handleVolume (e) {
+    const value = e.target.value
+    track.volume = value
   }
 
   return (
@@ -65,7 +64,11 @@ function AudioPlayer({ sound, description }) {
         />
       </div>
     </div>
-  );
+  )
 }
 
-export default AudioPlayer;
+AudioPlayer.propTypes = {
+  sound: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired
+}
+export default AudioPlayer

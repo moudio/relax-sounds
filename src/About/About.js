@@ -1,7 +1,7 @@
-import React from 'react';
-import './About.css';
+import React from 'react'
+import './About.css'
 
-function About() {
+function About () {
   return (
     <div className="About">
       <h1>Why Nature Sounds Help You Relax</h1>
@@ -12,7 +12,7 @@ function About() {
         stress by altering certain connections in our brain.
       </p>
     </div>
-  );
+  )
 }
 
-export default About;
+export default About

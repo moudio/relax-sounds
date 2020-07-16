@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from '@reach/router';
-import './Navigation.css';
-function Navigation() {
+import React from 'react'
+import { Link } from '@reach/router'
+import './Navigation.css'
+function Navigation () {
   return (
     <>
       <nav className="Navbar">
@@ -15,7 +15,7 @@ function Navigation() {
         </ul>
       </nav>
     </>
-  );
+  )
 }
 
-export default Navigation;
+export default Navigation

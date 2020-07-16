@@ -1,7 +1,7 @@
-import React from 'react';
-import Sounds from '../Sounds/Sounds';
-import './Welcome.css';
-function Welcome() {
+import React from 'react'
+import Sounds from '../Sounds/Sounds'
+import './Welcome.css'
+function Welcome () {
   return (
     <div className="welcome">
       <div className="hero">
@@ -13,7 +13,7 @@ function Welcome() {
       </div>
       <Sounds />
     </div>
-  );
+  )
 }
 
-export default Welcome;
+export default Welcome

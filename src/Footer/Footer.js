@@ -1,7 +1,7 @@
-import React from 'react';
-import './Footer.css';
+import React from 'react'
+import './Footer.css'
 
-function Footer() {
+function Footer () {
   return (
     <div className="Footer">
       &copy; 2020 By{' '}
@@ -9,7 +9,7 @@ function Footer() {
         Mouhamadou
       </a>{' '}
     </div>
-  );
+  )
 }
 
-export default Footer;
+export default Footer
