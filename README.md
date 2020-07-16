@@ -18,7 +18,7 @@
 
 ## Usage 
 ### Clone the project: 
- - git clone https://github.com/MouhaDiouf/sounds
+ - git clone https://github.com/MouhaDiouf/relax-sounds
  ### Run the project
  - to install the dependencies run the command : npm install 
  - after installation, run the command: npm start
@@ -33,7 +33,7 @@ Mouhamadou Diouf ( <a href="https://github.com/MouhaDiouf"> @mouhad </a>)
 
 ## Contributing
 
-1. Fork it (https://github.com/MouhaDiouf/appointment-client)
+1. Fork it (https://github.com/MouhaDiouf/relax-sounds)
 2. Create your feature branch (git checkout -b feature/[choose-a-name])
 3. Commit your changes (git commit -am 'What this commit will fix/add')
 4. Push to the branch (git push origin feature/[chosen name])
