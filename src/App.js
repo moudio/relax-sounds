@@ -5,6 +5,7 @@ import './App.css';
 import Welcome from './Welcome/Welcome';
 import About from './About/About';
 import Error from './Error/Error';
+import Footer from './Footer/Footer';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <About path="/about" />
         <Error path="*" />
       </Router>
+      <Footer />
     </div>
   );
 }
