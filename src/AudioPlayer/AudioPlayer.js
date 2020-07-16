@@ -39,30 +39,6 @@ function AudioPlayer({ sound, description }) {
     track.volume = value;
   }
 
-  function handleMute(e) {
-    console.log('handlemute');
-    let volumeInput = e.target;
-    console.log(volumeInput.nodeName);
-    if (volumeInput.nodeName === 'path') {
-      volumeInput = volumeInput.parentElement;
-      console.log(volumeInput, ' now');
-    }
-    let volumeRange = volumeInput.nextSibling;
-    console.log('volume Range ', volumeRange);
-    console.log(typeof volumeRange.value);
-    if (parseFloat(volumeRange.value) > 0) {
-      console.log(typeof parseFloat(volumeRange.value));
-      console.log(parseFloat(volumeRange.value));
-      console.log('yes');
-      volumeRange.setAttribute('value', 0);
-    } else {
-      volumeRange.setAttribute('value', 0.5);
-      console.log('no');
-      console.log(typeof parseInt(volumeRange.value));
-      console.log(parseInt(volumeRange.value));
-    }
-  }
-
   return (
     <div className="AudioPlayer">
       <div className="description">
@@ -76,10 +52,7 @@ function AudioPlayer({ sound, description }) {
       </div>
       <div className="equalizer"></div>
       <div className="volume">
-        <BsFillVolumeUpFill
-          className="volume-icon"
-          onClick={(e) => handleMute(e)}
-        />
+        <BsFillVolumeUpFill className="volume-icon" />
         <input
           className="volume-range"
           type="range"

@@ -5,10 +5,9 @@ function Footer() {
   return (
     <div className="Footer">
       &copy; 2020 By{' '}
-      <a href="http://" rel="noopener noreferrer" target="_blank">
+      <a href="http://mouhadiouf.com" rel="noopener noreferrer" target="_blank">
         Mouhamadou
       </a>{' '}
-      Mouhamadou
     </div>
   );
 }
