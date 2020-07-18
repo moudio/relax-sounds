@@ -1,4 +1,4 @@
-# Building a Recipe app with React & Redux.
+# Listen and relax 
 ![screenshot](./src/Pictures/relax_app_screenshot.jpg)
 
 
