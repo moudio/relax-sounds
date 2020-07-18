@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Navigation from './Navigation/Navigation'
+import { Router, globalHistory } from '@reach/router'
+import './App.css'
+import Welcome from './Welcome/Welcome'
+import About from './About/About'
+import Error from './Error/Error'
+import Footer from './Footer/Footer'
 
-function App() {
+function App () {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navigation />
+      <Router>
+        <Welcome exact={true} path="/" history={globalHistory} />
+        <About path="/about" />
+        <Error path="*" />
+      </Router>
+      <Footer />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

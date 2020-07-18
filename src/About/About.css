@@ -1,0 +1,9 @@
+.About {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.About p {
+  font-size: 20px;
+}
